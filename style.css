@@ -1,8 +1,4 @@
 :root {
-    --primaryfont-semibold: Zoho_Puvi_SemiBold;
-    --primaryfont-regular: Zoho_Puvi_Regular;
-    --zf-secondary-medium: Zoho_Puvi_Medium;
-    --primaryfont-bold: Zoho_Puvi_Bold;
     --primary-color: #008EF5;
     --secondary-color: #9914FF;
     --primary-font-color: #262626;
@@ -36,18 +32,129 @@
     margin: 24px 0px 24px;
 }
 
+/* Banner section image */
 .image-wrapper {
     background-image: url("/sites/zweb/images/analytics/feature/banner-bg-sub-page.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
     padding: 30px 0px 0px;
     overflow: hidden;
+    height: 705px;
 }
 
 .image-wrapper img {
     margin-bottom: -9px;
+    border-radius: 12px 12px 0px 0px;
 }
 
+
+/* banner sign up form styles */
+body.umain .cta-btn {
+    display: inline-block;
+}
+
+.cta-btn {
+    display: none;
+}
+
+body.umain .dwnload-btn {
+    display: none
+}
+
+.dwnload-btn {
+    background: var(--primary-btn-color);
+    color: #fff;
+    padding: 13px 30px;
+    border-radius: 4px;
+    font-size: 17px;
+}
+
+.formSec {
+    width: 100%;
+    overflow: auto;
+    max-width: 480px;
+    position: fixed;
+    transform: translateX(120%);
+    -webkit-transform: translateX(120%);
+    right: 0;
+    top: 0;
+    z-index: 0;
+    -webkit-box-shadow: -7px 0 28px 0 rgba(0, 0, 0, 0.46);
+    -moz-box-shadow: -7px 0 28px 0 rgba(0, 0, 0, 0.46);
+    box-shadow: -7px 0 28px 0 rgba(0, 0, 0, 0.46);
+    height: 100%;
+    background: #fff;
+    opacity: 0
+}
+
+.freeze_layer {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    display: none
+}
+
+.active_freaze {
+    display: block
+}
+
+.zoverlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.5);
+    display: none
+}
+
+.formSec.active {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    z-index: 9999999999999;
+    opacity: 1
+}
+
+.formInner {
+    border-left: 1px solid #ddd;
+    padding: 35px 20px;
+    background: #fff;
+    box-sizing: border-box;
+    height: auto;
+    text-align: left
+}
+
+.formInner h4 {
+    margin-bottom: 5px
+}
+
+.formInner span {
+    margin-bottom: 15px;
+    display: inline-block
+}
+
+.form-close {
+    background: url(/sites/zweb/images/close-icon.png) no-repeat;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    background-size: 17px;
+    opacity: .6
+}
+
+.formSec .signup-box {
+    max-width: 100%
+}
+
+/* Truested icon styles */
 .trusted-icon-wrap {
     padding: 20px 10px;
     overflow: hidden;
@@ -70,6 +177,57 @@
     vertical-align: top
 }
 
+/* Numbers counts styles */
+.za-cust-counts ul {
+    display: flex;
+    max-width: 532px;
+    margin: 15px auto 70px;
+    text-align: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 117px;
+    padding: 30px 20px 20px;
+    border-width: 1px 1px 0 1px;
+    border-style: solid;
+    border-color: var(--secondary-color);
+    box-shadow: 0 4px 22px 0 #00000017;
+}
+
+.za-cust-counts ul>li {
+    width: 40%;
+    position: relative
+}
+
+.za-cust-counts ul>li p {
+    margin: 0;
+    font-size: 20px
+}
+
+.za-cust-counts ul>li>span {
+    font-size: 50px;
+    line-height: 50px;
+    font-family: var(--zf-primary-semibold);
+}
+
+.za-cust-counts ul>li>span:after {
+    content: '+';
+    font-family: var(--zf-primary-extralight)
+}
+
+.za-cust-counts ul>li:not(:first-child):before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 50%;
+    background: #601d1c;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+    opacity: .2
+}
+
+/* sticky scroll styles */
 .scroll-section {
     background-image: url("/sites/zweb/images/analytics/feature/scroll-bg.png");
     background-size: cover;
@@ -111,7 +269,7 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    min-height: 55vh;
+    min-height: 58vh;
     padding-right: 60px;
     opacity: 0.2;
     transform: scale(1);
@@ -169,6 +327,11 @@
     line-height: 30px;
 }
 
+.scroll-images .image-container{
+    transition: all 1s;
+}
+
+/* Key features styles */
 .box-icon-section {
     padding: 80px 0;
     text-align: center;
@@ -265,16 +428,17 @@
     animation: translate 1s;
 }
 
-
 .box-icon-section .button-wrapper a:hover {
     box-shadow: 0px 2px 15px 0px #0000004a;
 }
 
+/* AI data visualization styles */
 .icon-border-section {
     background-image: url('/sites/zweb/images/analytics/feature/data-visualization-bg.png');
     background-size: cover;
     background-repeat: no-repeat;
     padding: 50px 0px;
+    background-color: #262626;
 }
 
 .icon-border-section .content-wrap {
@@ -350,6 +514,8 @@
     justify-content: center;
 }
 
+/* Testimonials styles */
+
 .zwc-nav-scroll-section {
     overflow: hidden;
     position: relative;
@@ -375,7 +541,8 @@
     display: flex;
     gap: 20px;
     animation: 45s linear 0s infinite normal none running marquee;
-    padding-right: 20px
+    padding-right: 20px;
+    flex: 1;
 }
 
 .zwc-nav-scroll-section>div:hover .zwc-nav-box-wrap {
@@ -390,6 +557,7 @@
     flex-direction: column;
     justify-content: space-between;
     border-radius: 8px;
+    flex: 1;
 }
 
 .zwc-nav-box:nth-child(1) {
@@ -504,13 +672,16 @@
     line-height: 25px;
 }
 
+
+/* Analysts section styles */
 .read-more-link {
     display: block;
     max-width: max-content;
     position: relative;
     color: var(--secondary-font-color);
     font-family: var(--zf-secondary-medium);
-    padding-right: 35px
+    padding-right: 35px;
+    text-decoration: underline;
 }
 
 .reported-section .report-slider {
@@ -601,6 +772,7 @@
     width: 40%;
     height: 690px;
     overflow: auto;
+    scrollbar-width: none;
 }
 
 .rating-sec {
@@ -747,6 +919,16 @@
 }
 
 
+@media only screen and (max-width :1366px) {
+    .za-cust-counts ul>li>span {
+        font-size: 42px;
+        line-height: 42px
+    }
+    .image-wrapper {
+        height: auto;
+    }
+}
+
 @media (max-width: 1200px) {
 
     .box-icon-section .content-main .card,
@@ -797,6 +979,9 @@
     .scroll-wrapper .scroll-image-wrapper {
         display: block;
         margin-top: 20px;
+        border-radius: 8px;
+        background-image: url(/sites/zweb/images/analytics/integrate-bg.png);
+        padding: 10px;
     }
 
     .sections.fade-in {
@@ -844,13 +1029,21 @@
     .reported-section .content-wrap .trust-section {
         height: auto;
     }
-
 }
 
 
 @media only screen and (max-width:767px) {
     .read-more-link {
         margin-left: 0
+    }
+
+    .za-cust-counts ul>li>span {
+        font-size: 38px;
+        line-height: 38px
+    }
+
+    .za-cust-counts ul>li p {
+        font-size: 17px
     }
 }
 
@@ -873,6 +1066,7 @@
     .report-slider .aem-report h5 {
         font-size: 25px;
         line-height: 33px;
+        width: 100%;
     }
 
     .scroll-wrapper h3 {
@@ -899,7 +1093,7 @@
     }
 
     .scroll-section {
-        padding: 50px 0 0px;
+        padding: 10px 0 0px;
     }
 
     .icon-border-section .content-main {
@@ -929,5 +1123,22 @@
 
     .pre-banner-section {
         padding: 45px 0;
+    }
+
+    .za-cust-counts ul>li>span {
+        font-size: 30px;
+        line-height: 30px
+    }
+
+    .za-cust-counts ul>li p {
+        font-size: 14px
+    }
+
+    .za-cust-counts ul {
+        margin: 14px auto 45px;
+    }
+
+    .pre-banner-section .content-wrapper h2 {
+        font-size: 30px;
     }
 }
